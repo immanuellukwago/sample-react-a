@@ -1,11 +1,12 @@
 const Footer = () => {
-   const date = <Date></Date>;
-   const name = "ImmanuelCode";
+   const date = new Date().getFullYear();
+   const name = "__ImmanuelCode__";
 
    return (
       <footer>
+         <hr />
          <p>
-            @ {date} {name}
+            &copy; {date} {name}
          </p>
       </footer>
    );
