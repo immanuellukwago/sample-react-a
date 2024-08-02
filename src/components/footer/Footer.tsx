@@ -5,6 +5,7 @@ const Footer = () => {
    return (
       <footer>
          <hr />
+         <a href="#">Back To Top</a>
          <p>
             &copy; {date} {name}
          </p>

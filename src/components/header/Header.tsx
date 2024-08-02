@@ -1,34 +1,25 @@
-import List from "../list/List";
-import "./Header.css";
+import { Container } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 function Header() {
    return (
-      <header>
+      <>
          <h1>ImmanuelCode</h1>
-         <nav className="navigation">
-            <ul>
-               <li>
-                  <List name={"/src/assets/home.png"} massage={"Home"} />
-               </li>
-               <li>
-                  <List
-                     name={"/src/assets/about.png"}
-                     massage={"About & Social"}
-                  />
-               </li>
-               <li>
-                  <List
-                     name={"/src/assets/language.png"}
-                     massage={"Languages & Frameworks"}
-                  />
-               </li>
-               <li>
-                  <List name={"/src/assets/project.png"} massage={"Projects"} />
-               </li>
-            </ul>
-         </nav>
+         <Navbar bg="dark" data-bs-theme="dark">
+            <Container>
+               <Navbar.Brand href="#">ImmanuelCode</Navbar.Brand>
+               <Nav className="me-auto">
+                  <Nav.Link href="#home">Home</Nav.Link>
+                  <Nav.Link href="#about">About</Nav.Link>
+                  <Nav.Link href="#languages">Languages</Nav.Link>
+                  <Nav.Link href="#social">Social</Nav.Link>
+                  <Nav.Link href="#projects">Projects</Nav.Link>
+               </Nav>
+            </Container>
+         </Navbar>
          <hr />
-      </header>
+      </>
    );
 }
 
